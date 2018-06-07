@@ -99,6 +99,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                     etres.setText(String.valueOf((int)memoryValue));
                 break;
+            case R.id.btnms:
+                inputvalue= Double.parseDouble(etres.getText().toString());
+                if (Double.isNaN(inputvalue)){
+                    etres.setText("no data");}
+                else {
+                    memoryValue = inputvalue;
+                    etres.setText(String.valueOf(memoryValue));}
+                break;
+
         }
     }
 }
